@@ -105,7 +105,7 @@ These files contain comprehensive metrics including:
 ## Folder Structure
 
 ```
-image-processing-mono-repo/
+image-processing-pipeline/
 ├── assets/                          # Static assets and architecture diagrams
 │   └── image-processing-backend-excali.svg
 ├── docker-compose.yml               # Multi-service Docker configuration
@@ -197,8 +197,8 @@ Special thanks to AI assistants for helping create comprehensive test files that
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/mahirjain10/image-processing-mono-repo 
-   cd image-processing-mono-repo
+    git clone https://github.com/mahirjain10/image-processing-pipeline
+    cd image-processing-pipeline
    ```
 
 2. **Start services with Docker Compose**
@@ -211,7 +211,7 @@ Special thanks to AI assistants for helping create comprehensive test files that
 
 4. **Configure environment variables**
 
-   - Copy [.env.example](cci:7://file:///d:/image-processing-mono-repo/go-workers/.env.example:0:0-0:0) to `.env` in both services
+   - Copy [.env.example](cci:7://file:///d:/image-processing-pipeline/go-workers/.env.example:0:0-0:0) to `.env` in both services
    - Update AWS credentials, database URLs, and webhook URLs
    - Configure worker counts per queue in worker configuration
    - Set up Redis pub/sub channels for real-time communication
