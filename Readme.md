@@ -1,4 +1,4 @@
-# Image Processing Mono-Repo
+# Image Processing Pipeline
 
 A high-performance, distributed image processing system built with NestJS backend and Go workers, designed to handle large-scale image transformations with queue-based processing.
 
