@@ -1,6 +1,8 @@
 # Image Processing Pipeline
 
-A high-performance, distributed image processing system built with NestJS backend and Go workers, designed to handle large-scale image transformations with queue-based processing.
+A demo project exploring async job processing with a queue-based architecture.
+Upload an image via the NestJS API, and Go workers pick it up from RabbitMQ to
+run transformations (rotate, resize, convert) before uploading the result to S3.
 
 ## Architecture Overview
 
