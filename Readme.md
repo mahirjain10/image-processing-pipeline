@@ -4,6 +4,8 @@ A demo project exploring async job processing with a queue-based architecture.
 Upload an image via the NestJS API, and Go workers pick it up from RabbitMQ to
 run transformations (rotate, resize, convert) before uploading the result to S3.
 
+**Status:** Complete demo. All services run via Docker Compose. Requires AWS credentials (S3, SNS) and a public webhook URL for SNS callbacks.
+
 ## Architecture Overview
 
 ![Architecture Diagram](assets/image-processing-backend-excali.svg)
