@@ -72,20 +72,22 @@ This is a working application with proven performance under load:
 
 ## Test Results
 
-Detailed test results are available in text format under [image-processing-service/src/test/](cci:7://file:///d:/image-processing-mono-repo/image-processing-service/src/test:0:0-0:0):
+Detailed test results are available in text format under `image-processing-service/src/test/`:
 
 **Test File Paths and Data:**
 
-- `image-processing-service/src/test/1 worker each.txt` - Performance with single worker per queue (60 jobs, 29.1s, 2.06 jobs/sec)
-- `image-processing-service/src/test/3 worker for convert and 1 each for.txt` - Optimized worker distribution (60 jobs, 21.7s, 2.77 jobs/sec)
-- [image-processing-service/src/test/3_workers_for_convert_and_1_each_for_others_100_jobs.txt](cci:7://file:///d:/image-processing-mono-repo/image-processing-service/src/test/3_workers_for_convert_and_1_each_for_others_100_jobs.txt:0:0-0:0) - High-volume load test (100 jobs, 23.2s, 4.31 jobs/sec)
-- `image-processing-service/src/test/1 worker each.(rotate,20).txt` - Extended duration test
+- [`1_worker_each_60_jobs.txt`](image-processing-service/src/test/1_worker_each_60_jobs.txt) - Single worker per queue (60 jobs, 29.1s, 2.06 jobs/sec)
+- [`3_worker_for_convert and_1_each_for_others_60_jobs.txt`](image-processing-service/src/test/3_worker_for_convert%20and_1_each_for_others_60_jobs.txt) - Optimized worker distribution (60 jobs, 21.7s, 2.77 jobs/sec)
+- [`3_workers_for_convert_and_1_each_for_others_100_jobs.txt`](image-processing-service/src/test/3_workers_for_convert_and_1_each_for_others_100_jobs.txt) - High-volume load test (100 jobs, 23.2s, 4.31 jobs/sec)
+- [`1_worker_each_20_jobs.txt`](image-processing-service/src/test/1_worker_each_20_jobs.txt) - Extended duration test (rotate, 20 jobs)
 
 **Visual Test Results:**
 
-- [image-processing-service/src/test/200_jobs_3W1W.png](cci:7://file:///d:/image-processing-mono-repo/image-processing-service/src/test/200_jobs_3W1W.png:0:0-0:0) - 200 jobs performance test (3 workers for convert, 1 each for others)
-- [image-processing-service/src/test/500_jobs_433_success.png](cci:7://file:///d:/image-processing-mono-repo/image-processing-service/src/test/500_jobs_433_success.png:0:0-0:0) - 500 jobs stress test results (part 1)
-- [image-processing-service/src/test/500_jobs_433_success_part_2.png](cci:7://file:///d:/image-processing-mono-repo/image-processing-service/src/test/500_jobs_433_success_part_2.png:0:0-0:0) - 500 jobs stress test results (part 2)
+![200 jobs test](image-processing-service/src/test/200_jobs_3W1W.png)
+
+![500 jobs test part 1](image-processing-service/src/test/500_jobs_433_success.png)
+
+![500 jobs test part 2](image-processing-service/src/test/500_jobs_433_success_part_2.png)
 
 **Queue-Specific Performance Data (from 100 jobs test):**
 
@@ -206,7 +208,7 @@ Worker counts can be adjusted based on:
 
 4. **Configure environment variables**
 
-   - Copy [.env.example](cci:7://file:///d:/image-processing-pipeline/go-workers/.env.example:0:0-0:0) to `.env` in both services
+   - Copy `.env.example` to `.env` in both services
    - Update AWS credentials, database URLs, and webhook URLs
    - Configure worker counts per queue in worker configuration
    - Set up Redis pub/sub channels for real-time communication
