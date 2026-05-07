@@ -25,7 +25,6 @@ This image processing system provides:
 - **Queue-Based Processing**: Asynchronous processing with multiple worker types
 - **Configurable Workers**: Ability to configure how many workers to spin up per queue (e.g., 3 workers for convert operations as they are heavy work)
 - **Real-time Updates**: Redis pub/sub for live job status updates and notifications
-- **Scalable Architecture**: Horizontal scaling with worker pools
 - **Webhook Notifications**: SNS-powered notifications on processing completion
 - **Performance Monitoring**: Built-in metrics and job tracking
 
@@ -154,10 +153,6 @@ Worker counts can be adjusted based on:
 - Operation complexity
 - Available system resources
 - Performance requirements
-
-## Special Thanks
-
-Special thanks to AI assistants for helping create comprehensive test files that validate the system's performance under various load conditions.
 
 ## Future Improvements
 
@@ -340,5 +335,3 @@ Key metrics to monitor:
 - **Notifications**: AWS SNS
 - **Containerization**: Docker, Docker Compose
 - **Image Processing**: Sharp (Node.js), Imaging (Go)
-
-
